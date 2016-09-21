@@ -19,4 +19,4 @@ profile
 build
 .DS_Store
 
-Resources/APIKeys.plist
+APIKeys.plist
