@@ -13,6 +13,9 @@
 		9D7FCA6E1D92F2DA00337574 /* DMNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA661D92F2DA00337574 /* DMNAppDelegate.m */; };
 		9D7FCA6F1D92F2DA00337574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA671D92F2DA00337574 /* main.m */; };
 		9D7FCA791D93011000337574 /* DMNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA781D93011000337574 /* DMNMainViewController.m */; };
+		9D7FCA7F1D9323AF00337574 /* DMNLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA7E1D9323AF00337574 /* DMNLibrary.m */; };
+		9D7FCA841D93336800337574 /* DMNLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */; };
+		9D7FCA861D933D6A00337574 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D7FCA851D933D6A00337574 /* APIKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		9D7FCA671D92F2DA00337574 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D7FCA771D93011000337574 /* DMNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNMainViewController.h; sourceTree = "<group>"; };
 		9D7FCA781D93011000337574 /* DMNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNMainViewController.m; sourceTree = "<group>"; };
+		9D7FCA7D1D9323AF00337574 /* DMNLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNLibrary.h; sourceTree = "<group>"; };
+		9D7FCA7E1D9323AF00337574 /* DMNLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNLibrary.m; sourceTree = "<group>"; };
+		9D7FCA821D93336800337574 /* DMNLibrariesNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNLibrariesNetworkController.h; sourceTree = "<group>"; };
+		9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNLibrariesNetworkController.m; sourceTree = "<group>"; };
+		9D7FCA851D933D6A00337574 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 				9D7FCA5F1D92F2DA00337574 /* LaunchScreen.storyboard */,
 				9D7FCA5E1D92F2DA00337574 /* Assets.xcassets */,
 				9D7FCA631D92F2DA00337574 /* Info.plist */,
+				9D7FCA851D933D6A00337574 /* APIKeys.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -84,6 +93,8 @@
 		9D7FCA711D9300CA00337574 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9D7FCA7D1D9323AF00337574 /* DMNLibrary.h */,
+				9D7FCA7E1D9323AF00337574 /* DMNLibrary.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -107,6 +118,8 @@
 		9D7FCA761D9300F400337574 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9D7FCA821D93336800337574 /* DMNLibrariesNetworkController.h */,
+				9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7FCA6C1D92F2DA00337574 /* Main.storyboard in Resources */,
+				9D7FCA861D933D6A00337574 /* APIKeys.plist in Resources */,
 				9D7FCA6A1D92F2DA00337574 /* Assets.xcassets in Resources */,
 				9D7FCA6B1D92F2DA00337574 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -187,6 +201,8 @@
 				9D7FCA791D93011000337574 /* DMNMainViewController.m in Sources */,
 				9D7FCA6F1D92F2DA00337574 /* main.m in Sources */,
 				9D7FCA6E1D92F2DA00337574 /* DMNAppDelegate.m in Sources */,
+				9D7FCA7F1D9323AF00337574 /* DMNLibrary.m in Sources */,
+				9D7FCA841D93336800337574 /* DMNLibrariesNetworkController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
