@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DMNMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,11 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Bi0-rM-ak0">
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4Y6-OV-Yg6"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pX0-lp-3bI">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LibraryCell" textLabel="0TD-IL-ubz" style="IBUITableViewCellStyleDefault" id="PAG-nO-oNm">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAG-nO-oNm" id="ChT-aR-l4X">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0TD-IL-ubz">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DUD-sc-28Q"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tBk-xQ-Ehx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pX0-lp-3bI" secondAttribute="trailing" id="6kc-Av-aPD"/>
+                            <constraint firstItem="pX0-lp-3bI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N6s-KD-sWV"/>
+                            <constraint firstAttribute="trailing" secondItem="Bi0-rM-ak0" secondAttribute="trailing" id="a1M-Ep-OVr"/>
+                            <constraint firstItem="Bi0-rM-ak0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i7S-w5-sA2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pX0-lp-3bI" secondAttribute="bottom" id="kLe-oy-OpN"/>
+                            <constraint firstItem="Bi0-rM-ak0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vA4-C1-h7X"/>
+                            <constraint firstItem="pX0-lp-3bI" firstAttribute="top" secondItem="Bi0-rM-ak0" secondAttribute="bottom" id="zXb-kd-pnb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Bi0-rM-ak0" id="UJY-V7-b7g"/>
+                        <outlet property="tableView" destination="pX0-lp-3bI" id="8p9-lS-zZM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="98.50074962518741"/>
         </scene>
     </scenes>
 </document>

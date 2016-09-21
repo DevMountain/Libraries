@@ -12,6 +12,7 @@
 		9D7FCA6C1D92F2DA00337574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D7FCA611D92F2DA00337574 /* Main.storyboard */; };
 		9D7FCA6E1D92F2DA00337574 /* DMNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA661D92F2DA00337574 /* DMNAppDelegate.m */; };
 		9D7FCA6F1D92F2DA00337574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA671D92F2DA00337574 /* main.m */; };
+		9D7FCA791D93011000337574 /* DMNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA781D93011000337574 /* DMNMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		9D7FCA651D92F2DA00337574 /* DMNAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNAppDelegate.h; sourceTree = "<group>"; };
 		9D7FCA661D92F2DA00337574 /* DMNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNAppDelegate.m; sourceTree = "<group>"; };
 		9D7FCA671D92F2DA00337574 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D7FCA771D93011000337574 /* DMNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNMainViewController.h; sourceTree = "<group>"; };
+		9D7FCA781D93011000337574 /* DMNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +70,45 @@
 		9D7FCA641D92F2DA00337574 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9D7FCA711D9300CA00337574 /* Model */,
+				9D7FCA751D9300E800337574 /* Views */,
+				9D7FCA761D9300F400337574 /* Controllers */,
+				9D7FCA731D9300D800337574 /* View Controllers */,
 				9D7FCA651D92F2DA00337574 /* DMNAppDelegate.h */,
 				9D7FCA661D92F2DA00337574 /* DMNAppDelegate.m */,
 				9D7FCA671D92F2DA00337574 /* main.m */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		9D7FCA711D9300CA00337574 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9D7FCA731D9300D800337574 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D7FCA771D93011000337574 /* DMNMainViewController.h */,
+				9D7FCA781D93011000337574 /* DMNMainViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9D7FCA751D9300E800337574 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9D7FCA761D9300F400337574 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7FCA791D93011000337574 /* DMNMainViewController.m in Sources */,
 				9D7FCA6F1D92F2DA00337574 /* main.m in Sources */,
 				9D7FCA6E1D92F2DA00337574 /* DMNAppDelegate.m in Sources */,
 			);
