@@ -15,6 +15,7 @@
 		9D7FCA791D93011000337574 /* DMNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA781D93011000337574 /* DMNMainViewController.m */; };
 		9D7FCA7F1D9323AF00337574 /* DMNLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA7E1D9323AF00337574 /* DMNLibrary.m */; };
 		9D7FCA841D93336800337574 /* DMNLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */; };
+		9DF722F51D944F7C00D468AD /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DF722F41D944F7C00D468AD /* APIKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9D7FCA7E1D9323AF00337574 /* DMNLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNLibrary.m; sourceTree = "<group>"; };
 		9D7FCA821D93336800337574 /* DMNLibrariesNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNLibrariesNetworkController.h; sourceTree = "<group>"; };
 		9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNLibrariesNetworkController.m; sourceTree = "<group>"; };
+		9DF722F41D944F7C00D468AD /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9D7FCA5F1D92F2DA00337574 /* LaunchScreen.storyboard */,
 				9D7FCA5E1D92F2DA00337574 /* Assets.xcassets */,
 				9D7FCA631D92F2DA00337574 /* Info.plist */,
+				9DF722F41D944F7C00D468AD /* APIKeys.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7FCA6C1D92F2DA00337574 /* Main.storyboard in Resources */,
+				9DF722F51D944F7C00D468AD /* APIKeys.plist in Resources */,
 				9D7FCA6A1D92F2DA00337574 /* Assets.xcassets in Resources */,
 				9D7FCA6B1D92F2DA00337574 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -357,6 +361,7 @@
 				9D7FCA581D92F28E00337574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
