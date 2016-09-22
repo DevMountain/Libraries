@@ -7,8 +7,12 @@
 //
 
 #import "DMNMainViewController.h"
+#import "DMNSearchController.h"
+#import "DMNLibrary.h"
 
 @interface DMNMainViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+
+@property (nonatomic, strong) DMNSearchController *searchController;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -20,31 +24,58 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	
+	self.searchController = [[DMNSearchController alloc] init];
+	
+	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	[nc addObserver:self
+		   selector:@selector(searchResultsDidUpdate:)
+			   name:DMNSearchControllerResultsDidUpdateNotification 
+			 object:nil];
 }
 
 #pragma mark - UITableViewDataSource/Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 1;
+	return self.searchController.searchResults.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"LibraryCell"];
+	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"LibraryCell" forIndexPath:indexPath];
+	
+	NSArray *results = self.searchController.searchResults;
+	DMNLibrary *library = results[indexPath.row];
+	
+	cell.textLabel.text = library.name;
 	
 	return cell;
 }
 
 #pragma mark - UISearchBarDelegate
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+	[searchBar resignFirstResponder];
+	
+	NSString *searchString = searchBar.text;
+	[self.searchController clearSearchResults];
+	[self.searchController searchForLibrariesMatching:searchString];
+}
 
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+}
+
+#pragma mark - Notifications
+
+- (void)searchResultsDidUpdate:(NSNotification *)notification
+{
+	[self.tableView reloadData];
 }
 
 @end

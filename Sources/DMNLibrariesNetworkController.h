@@ -12,6 +12,6 @@
 
 @property (nonatomic, class, readonly) DMNLibrariesNetworkController *sharedController;
 
-- (void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void(^)(NSArray *results, NSError *error))completion;
+- (void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void(^)(NSData *jsonData, NSError *error))completion;
 
 @end

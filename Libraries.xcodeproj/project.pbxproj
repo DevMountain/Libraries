@@ -16,6 +16,7 @@
 		9D7FCA7F1D9323AF00337574 /* DMNLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA7E1D9323AF00337574 /* DMNLibrary.m */; };
 		9D7FCA841D93336800337574 /* DMNLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */; };
 		9DF722F51D944F7C00D468AD /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DF722F41D944F7C00D468AD /* APIKeys.plist */; };
+		9DF722F81D94501800D468AD /* DMNSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF722F71D94501800D468AD /* DMNSearchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		9D7FCA821D93336800337574 /* DMNLibrariesNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNLibrariesNetworkController.h; sourceTree = "<group>"; };
 		9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNLibrariesNetworkController.m; sourceTree = "<group>"; };
 		9DF722F41D944F7C00D468AD /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
+		9DF722F61D94501800D468AD /* DMNSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNSearchController.h; sourceTree = "<group>"; };
+		9DF722F71D94501800D468AD /* DMNSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNSearchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 			children = (
 				9D7FCA821D93336800337574 /* DMNLibrariesNetworkController.h */,
 				9D7FCA831D93336800337574 /* DMNLibrariesNetworkController.m */,
+				9DF722F61D94501800D468AD /* DMNSearchController.h */,
+				9DF722F71D94501800D468AD /* DMNSearchController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7FCA791D93011000337574 /* DMNMainViewController.m in Sources */,
+				9DF722F81D94501800D468AD /* DMNSearchController.m in Sources */,
 				9D7FCA6F1D92F2DA00337574 /* main.m in Sources */,
 				9D7FCA6E1D92F2DA00337574 /* DMNAppDelegate.m in Sources */,
 				9D7FCA7F1D9323AF00337574 /* DMNLibrary.m in Sources */,

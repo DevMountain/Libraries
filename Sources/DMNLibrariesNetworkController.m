@@ -7,7 +7,6 @@
 //
 
 #import "DMNLibrariesNetworkController.h"
-#import "DMNLibrary.h"
 
 @implementation DMNLibrariesNetworkController
 
@@ -23,19 +22,11 @@
 
 #pragma mark - Public
 
-- (void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void(^)(NSArray *results, NSError *error))completion
+- (void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void(^)(NSData *jsonData, NSError *error))completion
 {
 	NSURL *searchURL = [self apiURLForSearchTerm:searchTerm];
 	NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-		if (error) {
-			NSLog(@"Error getting libraries.io search results for %@: %@", searchTerm, error);
-			completion(nil, error);
-			return;
-		}
-		
-		NSError *localError = nil;
-		NSArray *libraries = [self librariesByParsingJSONData:data error:&localError];
-		completion(libraries, localError);
+		completion(data, error);
 	}];
 	[task resume];
 }
@@ -74,24 +65,6 @@
 	urlComponents.queryItems = @[search, apiKey];
 	
 	return urlComponents.URL;
-}
-
-#pragma mark - Parsing
-
-- (NSArray *)librariesByParsingJSONData:(NSData *)data error:(NSError **)error
-{
-	error = error ?: &(NSError *__autoreleasing){ nil };
-	NSArray *dictionaries = [NSJSONSerialization JSONObjectWithData:data options:0 error:error];
-	if (!dictionaries) { return nil; }
-	
-	NSMutableArray *libraries = [NSMutableArray array];
-	for (NSDictionary *dictionary in dictionaries) {
-		DMNLibrary *library = [[DMNLibrary alloc] initWithDictionary:dictionary];
-		if (library) {
-			[libraries addObject:library];
-		}
-	}
-	return libraries;
 }
 
 @end
