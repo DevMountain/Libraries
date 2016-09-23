@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D492B441D959C44003ED7F9 /* DMNLibraryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D492B431D959C44003ED7F9 /* DMNLibraryDetailViewController.m */; };
 		9D7FCA6A1D92F2DA00337574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7FCA5E1D92F2DA00337574 /* Assets.xcassets */; };
 		9D7FCA6B1D92F2DA00337574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D7FCA5F1D92F2DA00337574 /* LaunchScreen.storyboard */; };
 		9D7FCA6C1D92F2DA00337574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D7FCA611D92F2DA00337574 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D492B421D959C44003ED7F9 /* DMNLibraryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNLibraryDetailViewController.h; sourceTree = "<group>"; };
+		9D492B431D959C44003ED7F9 /* DMNLibraryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNLibraryDetailViewController.m; sourceTree = "<group>"; };
 		9D7FCA3F1D92F28E00337574 /* Libraries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Libraries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7FCA5E1D92F2DA00337574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D7FCA601D92F2DA00337574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 			children = (
 				9D7FCA771D93011000337574 /* DMNMainViewController.h */,
 				9D7FCA781D93011000337574 /* DMNMainViewController.m */,
+				9D492B421D959C44003ED7F9 /* DMNLibraryDetailViewController.h */,
+				9D492B431D959C44003ED7F9 /* DMNLibraryDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				9D7FCA6F1D92F2DA00337574 /* main.m in Sources */,
 				9D7FCA6E1D92F2DA00337574 /* DMNAppDelegate.m in Sources */,
 				9D7FCA7F1D9323AF00337574 /* DMNLibrary.m in Sources */,
+				9D492B441D959C44003ED7F9 /* DMNLibraryDetailViewController.m in Sources */,
 				9D7FCA841D93336800337574 /* DMNLibrariesNetworkController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

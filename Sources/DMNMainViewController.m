@@ -8,6 +8,7 @@
 
 #import "DMNMainViewController.h"
 #import "DMNSearchController.h"
+#import "DMNLibraryDetailViewController.h"
 #import "DMNLibrary.h"
 
 @interface DMNMainViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
@@ -69,6 +70,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+	if ([segue.identifier isEqualToString:@"ShowLibraryDetail"]) {
+		DMNLibraryDetailViewController *detailVC = segue.destinationViewController;
+		NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+		NSArray *libraries = self.searchController.searchResults;
+		detailVC.library = libraries[indexPath.row];
+	}
 }
 
 #pragma mark - Notifications
