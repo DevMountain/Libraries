@@ -28,7 +28,7 @@ Students will build an Objective-C app to search and view information about open
 
 ## Part One - Model Objects
 
-### `DMNLibrary`
+### DMNLibrary
 
 Create a `DMNLibrary` model class that will hold `name`, `summary`, `language`, `homepageURL`, and `numberOfStars` properties.
 
@@ -44,7 +44,7 @@ Create a `DMNLibrary` model class that will hold `name`, `summary`, `language`, 
 
 *Preparation*: This project will use the [libraries.io API](https://libraries.io/api) to allow the user to search for and view information about open source libraries. In order to use the libraries.io API, you must register for an API key. Go to [libraries.io] and sign in using your GitHub account. From your [account page](https://libraries.io/account) find your API key. You'll need to include this in the URLs you use to get data from libraries.io.
 
-### `DMNLibrariesNetworkController`
+### DMNLibrariesNetworkController
 
 Create a network controller used to make requests against the libraries.io REST API.
 
@@ -67,7 +67,7 @@ Create a network controller used to make requests against the libraries.io REST 
 3. Create a `-fetchResultsForSearchTerm:completion:` method that takes a search string, searches for matching libraries using the libraries.io, and returns JSON data in an NSData using a passed in completion block.
 	* note: Review the syntax for Objective-C blocks. See [http://goshdarnblocksyntax.com](http://goshdarnblocksyntax.com) for a handy reference.
 
-### `DMNLibrary` JSON initialization
+### DMNLibrary JSON initialization
 
 Add a dictionary initializer to `DMNLibrary`.
 
