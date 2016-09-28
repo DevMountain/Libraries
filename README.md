@@ -12,19 +12,19 @@ Students will build an Objective-C app to search and view information about open
 * Use `NSURLSession` to make REST API calls in ObjC
 * Use `NSJSONSerialization` to parse JSON in ObjC
 
-### Part Three - User Interface
-
-* Implement a master-detail interface
-* Declare conformance to and implement the `UITableViewDataSource` protocol in ObjC
-* Create and use relationship segues
-* Implement `-prepareForSegue:` in Objective-C
-
-### Part Four - Search
+### Part Three - Search
 
 * Create a controller used for searching and managing search results
 * Add a `UISearchBar` to a view
 * Manually respond to `UISearchBar` interactions to search and update results
 * User GCD and `NSNotification`s in Objective-C to notify when search results have been updated
+
+### Part Four - User Interface
+
+* Implement a master-detail interface
+* Declare conformance to and implement the `UITableViewDataSource` protocol in ObjC
+* Create and use relationship segues
+* Implement `-prepareForSegue:` in Objective-C
 
 ## Part One - Model Objects
 
@@ -81,3 +81,15 @@ You will work on UI and the search functionality in the next two parts. In order
 
 * Add support for additional properties to `DMNLibrary`. The libraries.io API returns much more data than described here.
 * Add unit tests to verify that `-[DMNLibrary initWithDictionary:]` works correctly.
+
+## Part Three - Search
+
+### DMNSearchController
+
+Create a controller object whose purposes is to perform searches and maintain a list of search results. This is essentially a specialized model controller.
+
+* Create a class called `DMNSearchController`.
+* Add a property to contain an array of search results. It should be publicly readonly, but readwrite internally to the search controller (like `private(set)` in Swift).
+* Add a method to search for libraries based on a passed in search string.
+* Add a method to clear the list of search results.
+* When the search results are updated, an `NSNotification` should be posted so that other parts of the app (e.g. UI controllers) can reload UI, etc.
