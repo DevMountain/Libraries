@@ -92,4 +92,44 @@ Create a controller object whose purposes is to perform searches and maintain a 
 * Add a property to contain an array of search results. It should be publicly readonly, but readwrite internally to the search controller (like `private(set)` in Swift).
 * Add a method to search for libraries based on a passed in search string.
 * Add a method to clear the list of search results.
+<<<<<<< Updated upstream
 * When the search results are updated, an `NSNotification` should be posted so that other parts of the app (e.g. UI controllers) can reload UI, etc.
+=======
+* When the search results are updated, an `NSNotification` should be posted so that other parts of the app (e.g. UI controllers) can reload UI, etc.
+
+## Part Four - User Interface
+
+### DMNMainViewController
+
+Create a main view controller with a search bar and a table view for displaying search results.
+
+* Create a subclass of `UIViewController` called e.g. `DMNMainViewController`.
+* In the storyboard, set this view controller up with a search bar at the top, and a table view underneath that.
+* Make `DMNMainViewController` conform to the `UITableViewDataSource`, `UITableViewDelegate`, `UISearchBarDelegate` protocols.
+* Connect appropriate outlets and actions need to populate the table view and to react to user-initiated searches in the search bar.
+* Implement the `UITableViewDataSource` methods required to present a `DMNSearchController`'s search results in the table view.
+* In `-viewDidLoad` register for the search results update notification you made `DMNSearchController` post. When this notification happens, reload the table view so that new search results are displayed.
+* Implement the `UISearchBarDelegate` method `-searchBarSearchButtonClicked:` to initiate a new search when a user starts a new search using the search bar.
+
+### DMNLibraryDetailViewController
+
+Create a view controller to show details about a library when the user taps on it in the search results.
+
+* Create a subclass of `UIViewController` called e.g. `DMNLibraryDetailViewController`.
+* In the storyboard, add appropriate UI (labels, etc.) to show details about a specific library.
+* Add a property called `library` used to control the library for which details are being shown.
+* Create and implement a custom setter for the `library` property to make sure that the detail view controller's UI is updated in response to a new library being set.
+
+### Storyboard Segue
+
+* Create a show segue that is triggered when a row in the main view controller's table view is tapped. This segue should show the detail view controller. Give the segue an appropriate identifier.
+* In `DMNMainViewController`, implement `-prepareForSegue:sender:` to get the appropriate `DMNLibrary` instance and pass it to the destination `DMNLibraryDetailViewController`.
+
+### Black Diamonds
+
+* In the detail view, make it so that the library's homepage URL is clickable and opens an `SFSafariViewController` with the library's homepage.
+
+## Last Steps
+
+Put your project on GitHub so it can be reviewed by your mentor.
+>>>>>>> Stashed changes
