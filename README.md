@@ -92,9 +92,6 @@ Create a controller object whose purposes is to perform searches and maintain a 
 * Add a property to contain an array of search results. It should be publicly readonly, but readwrite internally to the search controller (like `private(set)` in Swift).
 * Add a method to search for libraries based on a passed in search string.
 * Add a method to clear the list of search results.
-<<<<<<< Updated upstream
-* When the search results are updated, an `NSNotification` should be posted so that other parts of the app (e.g. UI controllers) can reload UI, etc.
-=======
 * When the search results are updated, an `NSNotification` should be posted so that other parts of the app (e.g. UI controllers) can reload UI, etc.
 
 ## Part Four - User Interface
@@ -132,4 +129,3 @@ Create a view controller to show details about a library when the user taps on i
 ## Last Steps
 
 Put your project on GitHub so it can be reviewed by your mentor.
->>>>>>> Stashed changes
